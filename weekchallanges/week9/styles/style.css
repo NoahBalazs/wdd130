@@ -1,0 +1,47 @@
+body {
+    margin: 0%;
+    text-align: center;
+}
+
+#hero_img{
+    width: 100%;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 81px;
+    gap: 2px;
+    margin-top:  3.6em;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.stat {
+    border-color: white;
+    color: white;
+    background-color: rgb(27, 115, 178);
+    height: 100px;
+    
+}
+
+.text{
+    color: grey;
+    font-size: 1.25em;
+}
+
+#time {
+    color: rgb(78, 78, 201);
+}
+
+#footer{
+display: flex;
+flex-flow: column;
+margin-top: auto;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
