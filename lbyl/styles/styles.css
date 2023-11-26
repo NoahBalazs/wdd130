@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #AABD8C;
+    background-color: #aabd8ce0;
     display: grid;
     grid-template-columns: 150px auto;
 }
@@ -53,12 +53,15 @@ nav a:hover {
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
-    color: white;
+    color: #3066BE;
 }
 #hero-msg {
     grid-column: 2/3;
     grid-row: 1/2;
-    margin-top: 100px;
+    margin-top: 300px;
+    background-color: #f5deb3d6;
+    width: 45%;
+    justify-self: center;
 }
 #hero-box {
     grid-column: 1/4;
@@ -69,28 +72,28 @@ nav a:hover {
     width: 100%;
 }
 
-main {
+.home-grid {
     display: grid;
-    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 20px;
 }
 
 #backgroundTop {
     background-color: #3066BE;
     height: 325px;
-    grid-column: 1/7;
+    grid-column: 1/8;
     grid-row: 1/2;
 }
 #backgroundMiddle {
     background-color: #3066BE;
     height: 425px;
-    grid-column: 1/7;
-    grid-row: 3/7;
+    grid-column: 1/8;
+    grid-row: 3/9;
 }
 #backgroundBottom {
     background-color: #3066BE;
     height: 225px;
-    grid-column: 1/7;
-    grid-row: 8/9;
+    grid-column: 1/8;
+    grid-row: 11/12;
 }
 
 .spacer1{
@@ -98,8 +101,8 @@ main {
     grid-row: 2/3;
 }
 .spacer2{
-    height: 3;
-    grid-row: 7/8;
+    height: 3em;
+    grid-row: 9/10;
 }
 
 .msgTop{
@@ -107,20 +110,86 @@ main {
     grid-row: 1/2;
 }
 .msgMiddle{
-    grid-column: 2/5;
-    grid-row: 3/6;
+    grid-column: 3/7;
+    grid-row: 5/8;
     height:auto;
-    border-color: #141414;
+    background-color: #f5deb3d6;
     
 }
 .msgBottom{
-    grid-column: 2/5;
-    grid-row: 8/9;
+    grid-column: 2/7;
+    grid-row: 11/12;
     height:auto;
+}
+.msgBottom h2 p,.msgMiddle h2 p,.msgTop h2, p{
+    text-align: center;
+    font-size: 1em;
 }
 
 #filamenImg{
-    grid-column: 2/5;
-    grid-row: 3/6;
-    width: 30%;
+    grid-column: 2/6;
+    grid-row: 4/7;
+    width: 40%;
+}
+
+footer {
+    background-color: #AABD8C;
+    color: #FCF7F8;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a {
+    color: #FCF7F8;
+    text-align: center;
+    color: #fcfbfb;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #FCF7F8;
+}
+
+
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin: auto;
+    }
+    #hero-msg h4 {
+        display: none;
+    }
+    .home-title {
+        font-size: 25px;
+        color: #6f7364;
+    }
+    #backgroundTop {
+        display: none;
+    }
+    #backgroundMiddle {
+        display: none;
+    }
+    #backgroundBottom {
+        display: none;
+    }
+    footer {
+        margin-top: 25px;
+    }
+    #filamenImg{
+        width: 100%;
+    }
 }
