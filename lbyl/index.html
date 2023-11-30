@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layer By Layer</title>
     <link rel="stylesheet" href="styles/styles.css">
-
+    <script>/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "200px";
+          document.getElementById("content").style.marginLeft = "200px";
+        }
+        
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("content").style.marginLeft = "0";
+        }</script>
 </head>
 <body>
     <div id="content">
         <header>
-            <a id="logo_link" href="index.html">
-            <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
-            </a>
+            <button type="button" onclick="openNav()" id="logo_link">
+            <img class="logo" src="images/logo.png" alt="Layer By Layer Logo">
+            </button>
+
 
             <nav>
                 <a href="index.html">Home</a>
@@ -20,13 +31,21 @@
                 <a href="benchy.html">Benchy</a>
             </nav>
         </header>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="tuning.html">Tuning</a>
+            <a href="benchy.html">Benchy</a>
+        </div>
+
         <div id="hero">
             <div id="hero-box">
                 <img id="hero-img" src="images/hero.jpg" alt="A 3d pripnter">
             </div>
             <section id="hero-msg">
                 <h1 class="home-title">Layer by Layer</h1>
-                <h4>Lean to print better</h4>
+                <h4>Learn to print better</h4>
             </section>
         </div>
         <main id="home-grid">
