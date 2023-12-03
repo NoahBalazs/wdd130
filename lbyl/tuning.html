@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuning</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "200px";
+          document.getElementById("content").style.marginLeft = "200px";
+        }
+        
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("content").style.marginLeft = "0";
+        }</script>
 </head>
 <body>
     <div id="content">
         <header>
-            <a id="logo_link" href="index.html">
-            <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
-            </a>
+            <button type="button" onclick="openNav()" id="logo_link">
+                <img class="logo" src="images/logo.png" alt="Layer By Layer Logo">
+            </button>
 
             <nav>
                 <a href="index.html">Home</a>
                 <a href="tuning.html">Tuning</a>
                 <a href="benchy.html">Benchy</a>
-                <a href="site-plan.html">Site Plan</a>
             </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="tuning.html">Tuning</a>
+                <a href="benchy.html">Benchy</a>
+            </div>
+
         </header>
         <div id="hero">
             <div id="hero-box">
@@ -29,37 +48,43 @@
             </section>
         </div>
 
-        <main>
-            <div class="background"></div>
-            <section>
+        <main id="home-grid">
+            <div id="backgroundTop"></div>
+            <section class="msgTop">
                 <h2>Leveling the bed</h2>
                 <p>
                     Not all printers require manually leveling the bed, but a lot of beginner friendly printers have beds that require you to manually level the bed. Leveling the bed is easy. You will need a piece of paper. Make sure the hot end of the printing nozzle is cooled down, then put the piece of paper on the bed and lower the nozzle. Move the piece of paper back and forth and turn the leveling dial to raise or lower the bed. You are aiming for just a little bit of friction, which is the sweet spot. Move the nozzle to another corner of the bed and repeat the same process continue doing this until you don’t need to adjust the dials anymore. Your bed is now level.
                 </p>
             </section>
 
-            <div class="background"></div>
-            <section>
+            <div class="spacer1">&nbsp;</div>
+
+            <div id="backgroundMiddle"></div>
+            <img src="images/filament.jpg" id="filamenImg">
+            <section class="msgMiddle">
+                <h2>Filaments</h2>
+                <p>
+                    Your choice of filament might be causing your problems. Different filaments need to be heated to different temperatures and be printed at different speeds. A lot of slicers have addons for temperature towers that can help you figure out the best temperature to print your filament at.
+                </p>
+            </section>
+
+            <div class="spacer2">&nbsp;</div>
+
+            <div id="backgroundBottom"></div>
+            <section class="msgBottom">
                 <h2>Slicer options</h2>
                 <p>
                     up your slicer is something you have to learn. Every printer is a bit different in size and speed that they can print at. Most printers have presets you can choose from that greatly decrease the difficulty of this task. Fine-tuning the slicer setting beyond the preset is a good idea and something you will have to do to get the best print from your printer. YouTube is awesome for finding out how to properly fine tune your slicer settings.
                 </p>
             </section>
 
-            <div class="background"></div>
-            <img src="images/filament.jpg">
-            <section class="text">
+            <div class="spacer3">&nbsp;</div>
+
+            <div id="background"></div>
+            <section class="msg">
                 <h2>Benchmark prints</h2>
                 <p>
                     Benchmark prints are an important part of fine-tuning your printer. You can learn about the Benchy benchmark print <a href="benchy.html">HERE.</a>
-                </p>
-            </section>
-
-            <div class="background"></div>
-            <section>
-                <h2>Filaments</h2>
-                <p>
-                    Your choice of filament might be causing your problems. Different filaments need to be heated to different temperatures and be printed at different speeds. A lot of slicers have addons for temperature towers that can help you figure out the best temperature to print your filament at.
                 </p>
             </section>
         </main>
