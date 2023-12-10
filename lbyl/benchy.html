@@ -4,35 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benchy</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "200px";
+          document.getElementById("content").style.marginLeft = "200px";
+        }
+        
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("content").style.marginLeft = "0";
+        }</script>
 </head>
 <body>
     <div id="content">
         <header>
-            <a id="logo_link" href="index.html">
-            <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
-            </a>
+            <button type="button" onclick="openNav()" id="logo_link">
+            <img class="logo" src="images/logo.png" alt="Layer By Layer Logo">
+            </button>
+
 
             <nav>
                 <a href="index.html">Home</a>
                 <a href="tuning.html">Tuning</a>
                 <a href="benchy.html">Benchy</a>
-                <a href="site-plan.html">Site Plan</a>
             </nav>
         </header>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="tuning.html">Tuning</a>
+            <a href="benchy.html">Benchy</a>
+        </div>
+
         <div id="hero">
             <div id="hero-box">
                 <img id="hero-img" src="images/benchy.jpg" alt="A 3D printing bed leveling dial">
             </div>
             <section id="hero-msg">
                 <h1 class="home-title">Tuning</h1>
-                <h4>Lean to better tune your printer</h4>
+                <h4>The bench mark print</h4>
             </section>
         </div>
 
-        <main>
-            <div class="background"></div>
-            <img src="images/becnchy_half.jpg">
-            <section class="text">
+        <main id="home-grid">
+            <div id="backgroundMiddle"></div>
+            <img src="images/becnchy_half.jpg" id="filamenImg" alt="A toy boat being printed">
+            <section class="msgMiddle">
                 <h2>The Benchy</h2>
                 <p>
                     The Benchy is a benchmark test, meant to see if your printer is set up correctly. It uses almost every kind of print you might be using, which will pinpoint any problems with accuracy and calibration. The Benchy is going to print a boat.  In this boat, there are a lot of hard-to-print features, such as an arch, cylinders, overhangs, tiny details, smooth surfaces, and horizontal holes.  It is also a great print for beginners to find out how to fine-tune their printer to achieve better prints, nicer-looking prints, and stronger prints. You should print the benchy and see if your printer is as finetuned as you think it is.
@@ -41,7 +61,7 @@
         </main>
         <footer>
             <p>Dry Oar &copy; 2023 - Noah Balazs</p>
-            <p><a href="site-plan-rafting.html">Site Plan</a></p>
+            <p><a href="site-plan.html">Site Plan</a></p>
         </footer>
     </div>
 </body>
