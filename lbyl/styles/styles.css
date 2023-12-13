@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+h2, h1 {
+    font-family: "Roboto slab", Roboto;
+}
 
 #content {
     max-width: 1600px;
